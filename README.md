@@ -1,4 +1,3 @@
-Sure! Here's the extended version of the README.md file, including more important MySQL questions for data science interviews:
 
 ---
 
