@@ -1,6 +1,3 @@
-
----
-
 # MySQL Interview Q&A Cheatsheet
 
 ## Table of Contents
@@ -54,6 +51,9 @@
    - [Window Functions](#window-functions)
    - [CTEs (Common Table Expressions)](#ctes-common-table-expressions)
    - [Temporary Tables](#temporary-tables)
+8. [Security Concepts](#security-concepts)
+   - [SQL Injection](#sql-injection)
+9. [Important Data Science Interview Questions](#important-data-science-interview-questions)
 
 ## General Concepts
 
@@ -311,13 +311,13 @@ WHERE condition;
 ```sql
 SELECT column_name(s) FROM table1
 UNION
-SELECT column_name(s) FROM table2;
+SELECT column_name(s
+
+) FROM table2;
 ```
 
 ### GROUP BY
-**Q:** What does the
-
- GROUP BY statement do?  
+**Q:** What does the GROUP BY statement do?  
 **A:** The GROUP BY statement groups rows that have the same values into summary rows.
 
 **Syntax:**
@@ -516,6 +516,211 @@ CREATE TEMPORARY TABLE temp_table_name (
 );
 ```
 
----
+## Security Concepts
 
-This README.md file provides a comprehensive overview of common MySQL interview questions and answers, including essential concepts and their explanations, syntax, and examples. It also includes data science-specific questions to help you prepare effectively for MySQL-related interview questions.
+### SQL Injection
+**Q:** What is SQL injection?  
+**A:** SQL injection is a type of security vulnerability that allows attackers to interfere with the queries that an application makes to its database.
+
+**Prevention Techniques:**
+1. Use prepared statements and parameterized queries.
+2. Use stored procedures.
+3. Validate and sanitize user inputs.
+4. Use ORM (Object Relational Mapping) frameworks.
+5. Implement proper error handling.
+
+## Important Data Science Interview Questions
+
+### Pattern Matching
+**Q:** What is Pattern Matching in SQL?  
+**A:** Pattern matching in SQL is done using the LIKE operator to search for a specified pattern in a column.
+
+### Creating Empty Tables
+**Q:** How to create empty tables with the same structure as another table?  
+**A:** Use the CREATE TABLE statement with the AS clause and a false condition.
+
+**Syntax:**
+```sql
+CREATE TABLE new_table AS SELECT * FROM existing_table WHERE 1=0;
+```
+
+### Recursive Stored Procedure
+**Q:** What is a Recursive Stored Procedure?  
+**A:** A recursive stored procedure is a stored procedure that calls itself until a boundary condition is met.
+
+### Collation
+**Q:** What is Collation? What are the different types of Collation Sensitivity?  
+**A:** Collation specifies how data is sorted and compared. Types include case sensitivity, accent sensitivity, kana sensitivity, and width sensitivity.
+
+### OLTP vs OLAP
+**Q:** What are the differences between OLTP and OLAP?  
+**A:** OLTP (Online Transaction Processing) is used for transactional applications, while OLAP (Online Analytical Processing) is used for analytical and data warehousing applications.
+
+### User-defined Function
+**Q:** What is a User-defined function? What are its various types?  
+**A:** A user-defined function is a function created by the user. Types include scalar functions, inline table-valued functions, and multi-statement table-valued functions.
+
+### UNIQUE Constraint
+**Q:** What is a UNIQUE constraint?  
+**A:** A UNIQUE constraint ensures all values in a column are unique.
+
+### Query
+**Q:** What is a Query?  
+**A:** A query is a request for data or information from a database.
+
+### Data Integrity
+**Q:** What is Data Integrity?  
+**A:** Data integrity refers to the accuracy and consistency of data stored in a database.
+
+### Clustered vs Non-clustered Index
+**Q:** What is the difference between Clustered and Non-clustered index?  
+**A:** A clustered index determines the physical order of data in a table, while a non-clustered index does not alter the physical order of data.
+
+### Index
+**Q:** What is an Index? Explain its different types.  
+**A:** An index is a database object used to speed up data retrieval. Types include unique, non-unique, clustered, and non-clustered indexes.
+
+### Cross-Join
+**Q:** What is a Cross-Join?  
+**A:** A cross-join returns the Cartesian product of two tables, combining all rows from the first table with all rows from the second table.
+
+### Self-Join
+**Q:** What is a Self-Join?  
+**A:** A self-join is a join that is used to join a table with itself.
+
+### Foreign Key
+**Q:** What is a Foreign Key?  
+**A:** A foreign key is a column or set of columns that establishes a link between data in two tables.
+
+### Subquery
+**Q:** What is a Subquery? What are its types?  
+**A:** A subquery is a query nested within another query. Types include single-row subquery, multiple-row subquery, and correlated subquery.
+
+### Primary Key
+**Q:** What is a Primary Key?  
+**A:** A primary key is a column or set of columns that uniquely identifies each row in a table.
+
+### Constraints
+**Q:** What are Constraints in SQL?  
+**A:** Constraints are rules applied to table columns to enforce data integrity.
+
+### Tables and Fields
+**Q:** What are Tables and Fields?  
+**A:** Tables are collections of related data entries, and fields are columns in a table.
+
+### RDBMS vs DBMS
+**
+
+Q:** What is RDBMS? How is it different from DBMS?  
+**A:** RDBMS (Relational Database Management System) stores data in related tables, whereas DBMS (Database Management System) does not necessarily use a tabular structure.
+
+### DBMS
+**Q:** What is DBMS?  
+**A:** DBMS is software for creating and managing databases.
+
+### Database
+**Q:** What is a Database?  
+**A:** A database is an organized collection of structured data.
+
+### SELECT Statement
+**Q:** What is the SELECT statement?  
+**A:** The SELECT statement is used to query the database and retrieve data.
+
+### Common Clauses with SELECT
+**Q:** What are some common clauses used with SELECT query in SQL?  
+**A:** Common clauses include WHERE, ORDER BY, GROUP BY, HAVING, and LIMIT.
+
+### UNION, MINUS, INTERSECT
+**Q:** What are UNION, MINUS and INTERSECT commands?  
+**A:** UNION combines results of two queries, MINUS returns the difference, and INTERSECT returns the intersection of two queries.
+
+### Cursor
+**Q:** What is a Cursor?  
+**A:** A cursor is a database object used to retrieve, manipulate, and navigate through a result set row by row.
+
+### Entities and Relationships
+**Q:** What are Entities and Relationships?  
+**A:** Entities are objects stored in tables, and relationships define how entities are related.
+
+### Types of Relationships
+**Q:** List the different types of relationships in SQL.  
+**A:** Types include one-to-one, one-to-many, and many-to-many relationships.
+
+### Alias
+**Q:** What is an Alias in SQL?  
+**A:** An alias is a temporary name for a table or column.
+
+### View
+**Q:** What is a View?  
+**A:** A view is a virtual table based on the result-set of a query.
+
+### Normalization
+**Q:** What is Normalization?  
+**A:** Normalization is the process of organizing data to minimize redundancy.
+
+### Denormalization
+**Q:** What is Denormalization?  
+**A:** Denormalization is the process of combining normalized tables to improve read performance.
+
+### Forms of Normalization
+**Q:** What are the various forms of Normalization?  
+**A:** Forms include 1NF, 2NF, 3NF, BCNF, and 4NF.
+
+### TRUNCATE, DELETE, DROP
+**Q:** What are the TRUNCATE, DELETE and DROP statements?  
+**A:** TRUNCATE removes all rows from a table, DELETE removes rows based on a condition, and DROP removes the table and its data.
+
+### Aggregate vs Scalar Functions
+**Q:** What are Aggregate and Scalar functions?  
+**A:** Aggregate functions operate on a set of values and return a single value. Scalar functions operate on a single value and return a single value.
+
+### Ranking Functions
+**Q:** What are Ranking Functions in SQL?  
+**A:** Ranking functions return a ranking value for each row in a partition.
+
+**Syntax:**
+```sql
+SELECT column_name, RANK() OVER (PARTITION BY column_name ORDER BY column_name) AS rank
+FROM table_name;
+```
+
+### DDL, DML, DCL, TCL
+**Q:** What are the different types of SQL commands?  
+**A:** SQL commands can be categorized into four main types: Data Definition Language (DDL), Data Manipulation Language (DML), Data Control Language (DCL), and Transaction Control Language (TCL).
+
+### SQL Injection
+**Q:** What is SQL Injection?  
+**A:** SQL Injection is a security vulnerability that allows attackers to interfere with SQL queries made to a database.
+
+### Recursive Stored Procedure
+**Q:** What is a Recursive Stored Procedure?  
+**A:** A recursive stored procedure calls itself until a boundary condition is met.
+
+### Collation
+**Q:** What is Collation?  
+**A:** Collation determines how data is sorted and compared in a database.
+
+### OLTP
+**Q:** What is OLTP?  
+**A:** OLTP (Online Transaction Processing) is a category of data processing that supports transaction-oriented applications.
+
+### ACID Properties
+**Q:** What are ACID properties in the context of database transactions?  
+**A:** ACID stands for Atomicity, Consistency, Isolation, Durability, which are the key properties that ensure reliable transaction processing.
+
+### Constraints
+**Q:** What are Constraints in SQL?  
+**A:** Constraints are rules enforced on data columns on a table to ensure the validity and integrity of data.
+
+### Transactions
+**Q:** What is a Transaction in SQL?  
+**A:** A transaction is a sequence of SQL operations that are executed as a single unit of work.
+
+### Triggers
+**Q:** What is a Trigger in SQL?  
+**A:** A trigger is a database object that automatically executes a predefined action when certain events occur.
+
+### Events
+**Q:** What is an Event in SQL?  
+**A:** An event is a task that runs according to a schedule.
+
